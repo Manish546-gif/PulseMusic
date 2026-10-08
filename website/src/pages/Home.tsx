@@ -269,7 +269,7 @@ export function Home() {
                 <h2 className="h2">Share anything, anywhere.</h2>
                 <p>
                   Every song, playlist, and artist gets a clean{" "}
-                  <span style={{ fontFamily: "var(--font-mono)" }}>share.pulsemusic.app</span> link.
+                  <span style={{ fontFamily: "var(--font-mono)" }}>{SHARE_URL}</span> link.
                   On Android, the link opens straight in the app. Anywhere else, it lands on a
                   beautiful shared page — no registration needed.
                 </p>

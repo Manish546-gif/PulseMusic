@@ -1,4 +1,4 @@
-package com.pulse.music.manish.ui.screens.settings
+﻿package com.pulse.music.manish.ui.screens.settings
 
 import android.content.Intent
 import android.net.Uri
@@ -134,7 +134,7 @@ fun UpdateSettings(
               }
             },
             onClick = {
-              val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://pulsemusic.app"))
+              val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://pulsemusicapp.vercel.app"))
               context.startActivity(intent)
             }
           )
@@ -189,7 +189,7 @@ fun UpdateSettings(
                     horizontalArrangement = Arrangement.spacedBy(8.dp)
                   ) {
                     Text(
-                      text = "•",
+                      text = "â€¢",
                       style = MaterialTheme.typography.bodyMedium,
                       color = MaterialTheme.colorScheme.primary,
                       fontWeight = FontWeight.Bold,

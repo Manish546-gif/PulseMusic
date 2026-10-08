@@ -1,4 +1,4 @@
-package com.pulse.music.manish.ui.menu
+﻿package com.pulse.music.manish.ui.menu
 
 import android.content.Context
 import android.content.Intent
@@ -162,7 +162,7 @@ fun LocalPlaylistMenu(
         onClick = {
           val shareText =
             if (isYouTubePlaylist) {
-              "https://share.pulsemusic.app/playlist?list=${playlist.playlist.browseId}"
+              "https://pulsemusicapp.vercel.app/playlist?list=${playlist.playlist.browseId}"
             } else {
               songs.joinToString("\n") { it.song.song.title }
             }

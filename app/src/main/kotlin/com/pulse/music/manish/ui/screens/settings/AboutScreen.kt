@@ -1,4 +1,4 @@
-@file:OptIn(ExperimentalMaterial3ExpressiveApi::class)
+﻿@file:OptIn(ExperimentalMaterial3ExpressiveApi::class)
 
 package com.pulse.music.manish.ui.screens.settings
 
@@ -172,8 +172,8 @@ fun AboutScreen(
               Material3SettingsItem(
                 icon = painterResource(R.drawable.website),
                 title = { Text("Website") },
-                description = { Text("pulsemusic.app") },
-                onClick = { uriHandler.openUri("https://pulsemusic.app") }
+                description = { Text("pulsemusicapp.vercel.app") },
+                onClick = { uriHandler.openUri("https://pulsemusicapp.vercel.app") }
               ),
               Material3SettingsItem(
                 icon = painterResource(R.drawable.ic_instagram_new),

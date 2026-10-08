@@ -1,4 +1,4 @@
-package com.pulse.music.manish.ui.menu
+﻿package com.pulse.music.manish.ui.menu
 
 import android.content.Context
 import android.content.res.Configuration
@@ -405,7 +405,7 @@ fun PlayerMenu(
                     type = "text/plain"
                     putExtra(
                       android.content.Intent.EXTRA_TEXT,
-                      "https://share.pulsemusic.app/watch?v=${mediaMetadata.id}"
+                      "https://pulsemusicapp.vercel.app/watch?v=${mediaMetadata.id}"
                     )
                   }
                 context.startActivity(android.content.Intent.createChooser(intent, null))

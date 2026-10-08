@@ -1,4 +1,4 @@
-package com.pulse.music.manish.ui.screens
+﻿package com.pulse.music.manish.ui.screens
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -293,16 +293,16 @@ fun AlbumScreen(
               val albumInfoText = buildString {
                 append(stringResource(R.string.album_text))
                 if (albumWithSongs.album.year != null) {
-                  append(" • ${albumWithSongs.album.year}")
+                  append(" â€¢ ${albumWithSongs.album.year}")
                 }
-                append(" • ${albumWithSongs.songs.size} Tracks")
+                append(" â€¢ ${albumWithSongs.songs.size} Tracks")
                 val totalDuration = albumWithSongs.songs.sumOf { it.song.duration }
                 val hours = totalDuration / 3600
                 val minutes = (totalDuration % 3600) / 60
                 if (hours > 0) {
-                  append(" • ${hours}h ${minutes}m")
+                  append(" â€¢ ${hours}h ${minutes}m")
                 } else {
-                  append(" • ${minutes}m")
+                  append(" â€¢ ${minutes}m")
                 }
               }
 
@@ -360,7 +360,7 @@ fun AlbumScreen(
                     )
                     if (hasExplicitContent) {
                       Text(
-                        text = " • ",
+                        text = " â€¢ ",
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                       )
@@ -413,7 +413,7 @@ fun AlbumScreen(
                     )
                     if (hasExplicitContent) {
                       Text(
-                        text = " • ",
+                        text = " â€¢ ",
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                       )
@@ -835,7 +835,7 @@ fun AlbumScreen(
                     type = "text/plain"
                     putExtra(
                       android.content.Intent.EXTRA_TEXT,
-                      "https://share.pulsemusic.app/playlist?list=${albumWithSongs.album.playlistId}"
+                      "https://pulsemusicapp.vercel.app/playlist?list=${albumWithSongs.album.playlistId}"
                     )
                   }
                 context.startActivity(android.content.Intent.createChooser(intent, null))

@@ -1,4 +1,4 @@
-package com.pulse.music.manish
+﻿package com.pulse.music.manish
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -533,12 +533,12 @@ class MainActivity : ComponentActivity() {
       }
 
       if (lastSeenVersion.isEmpty()) {
-        // Fresh install, not an update â€” nothing "new" to show, so mark this
+        // Fresh install, not an update Ã¢â‚¬â€ nothing "new" to show, so mark this
         // version seen right away rather than waiting on a dialog dismissal.
         com.pulse.music.manish.pulse.updater.saveLastSeenChangelogVersion(context, currentVersion)
       } else if (lastSeenVersion != currentVersion) {
         // Only mark the version seen once its changelog is actually shown (see
-        // onDismiss below) â€” if the fetch fails here, retry on the next launch
+        // onDismiss below) Ã¢â‚¬â€ if the fetch fails here, retry on the next launch
         // instead of losing that version's release notes forever.
         whatsNewInfo = com.pulse.music.manish.pulse.updater.fetchChangelogForVersion(currentVersion)
       }
@@ -1712,7 +1712,7 @@ class MainActivity : ComponentActivity() {
         val videoId =
           when {
             path == "watch" -> uri.getQueryParameter("v")
-            uri.host == "youtu.be" || uri.host == "share.pulsemusic.app" ->
+            uri.host == "youtu.be" || uri.host == "pulsemusicapp.vercel.app" ->
               uri.pathSegments.firstOrNull()
             else -> null
           }

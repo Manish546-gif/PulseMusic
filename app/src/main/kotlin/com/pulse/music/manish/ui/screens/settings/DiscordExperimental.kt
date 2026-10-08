@@ -1,4 +1,4 @@
-package com.pulse.music.manish.ui.screens.settings
+﻿package com.pulse.music.manish.ui.screens.settings
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -80,7 +80,7 @@ fun DiscordExperimental(navController: NavController) {
   val (button2CustomUrl, onButton2CustomUrlChange) =
     rememberPreference(
       key = DiscordActivityButton2CustomUrlKey,
-      defaultValue = "https://pulsemusic.app",
+      defaultValue = "https://pulsemusicapp.vercel.app",
     )
 
   Scaffold { inner ->

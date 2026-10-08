@@ -1,4 +1,4 @@
-package com.pulse.music.manish.ui.menu
+﻿package com.pulse.music.manish.ui.menu
 
 import android.content.Intent
 import android.content.res.Configuration
@@ -283,7 +283,7 @@ fun QueueMenu(
                     type = "text/plain"
                     putExtra(
                       Intent.EXTRA_TEXT,
-                      "https://share.pulsemusic.app/watch?v=${mediaMetadata.id}"
+                      "https://pulsemusicapp.vercel.app/watch?v=${mediaMetadata.id}"
                     )
                   }
                 context.startActivity(Intent.createChooser(intent, null))

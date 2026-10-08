@@ -1,4 +1,4 @@
-package com.pulse.music.manish.ui.menu
+﻿package com.pulse.music.manish.ui.menu
 
 import android.content.Intent
 import android.content.res.Configuration
@@ -424,7 +424,7 @@ fun SongMenu(
                   Intent().apply {
                     action = Intent.ACTION_SEND
                     type = "text/plain"
-                    putExtra(Intent.EXTRA_TEXT, "https://share.pulsemusic.app/watch?v=${song.id}")
+                    putExtra(Intent.EXTRA_TEXT, "https://pulsemusicapp.vercel.app/watch?v=${song.id}")
                   }
                 context.startActivity(Intent.createChooser(intent, null))
               }
@@ -763,7 +763,7 @@ fun SongMenu(
                   Material3MenuItemData(
                     title = {
                       val text = stringResource(R.string.exporting)
-                      Text(text = if (exportProgress != null) "$text • $exportProgress%" else text)
+                      Text(text = if (exportProgress != null) "$text â€¢ $exportProgress%" else text)
                     },
                     icon = {
                       CircularProgressIndicator(

@@ -1,4 +1,4 @@
-package com.pulse.music.manish.ui.component
+﻿package com.pulse.music.manish.ui.component
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -2112,7 +2112,7 @@ fun Lyrics(
                   Intent().apply {
                     action = Intent.ACTION_SEND
                     type = "text/plain"
-                    val songLink = "https://share.pulsemusic.app/watch?v=${mediaMetadata?.id}"
+                    val songLink = "https://pulsemusicapp.vercel.app/watch?v=${mediaMetadata?.id}"
                     putExtra(
                       Intent.EXTRA_TEXT,
                       "\"$lyricsText\"\n\n$songTitle - $artists\n$songLink"

@@ -1,5 +1,5 @@
-export const WEB_URL = "https://pulsemusic.app";
-export const SHARE_URL = "https://share.pulsemusic.app";
+export const WEB_URL = "https://pulsemusicapp.vercel.app";
+export const SHARE_URL = "https://pulsemusicapp.vercel.app";
 
 export const LINKS = {
   github: "https://github.com/Manish546-gif/PulseMusic",

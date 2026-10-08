@@ -1,4 +1,4 @@
-@file:Suppress("DEPRECATION")
+﻿@file:Suppress("DEPRECATION")
 
 package com.pulse.music.manish.playback
 
@@ -297,7 +297,7 @@ class MusicService : MediaLibraryService(), Player.Listener, PlaybackStatsListen
     val triggerTimeMs: Long,
     val incomingStartMs: Long,
     val tempoRatio: Float,
-    /** Harmonic correction on the incoming track's pitch, capped at ±3 semitones. */
+    /** Harmonic correction on the incoming track's pitch, capped at Â±3 semitones. */
     val pitchRatio: Float = 1f,
     /** DJ blend length: 16 beats of the outgoing track, clamped to sane bounds. */
     val overlapMs: Long,
@@ -1352,7 +1352,7 @@ class MusicService : MediaLibraryService(), Player.Listener, PlaybackStatsListen
    * Acquires a high-performance Wi-Fi lock when playback starts.
    *
    * WIFI_MODE_FULL_HIGH_PERF tells the system to keep the Wi-Fi chip fully active with minimal
-   * latency — disabling power-saving sleep cycles. This is called every time [player.isPlaying]
+   * latency â€” disabling power-saving sleep cycles. This is called every time [player.isPlaying]
    * becomes true.
    */
   private fun acquireWifiLock() {
@@ -1978,7 +1978,7 @@ class MusicService : MediaLibraryService(), Player.Listener, PlaybackStatsListen
       indicesToRemove.sortedDescending().forEach { index -> player.removeMediaItem(index) }
     }
 
-    // Suppress onTimelineChanged Cast sync — we handle it directly below
+    // Suppress onTimelineChanged Cast sync â€” we handle it directly below
     player.addMediaItems(items)
 
     // Sync new items to end of Cast queue
@@ -2100,7 +2100,7 @@ class MusicService : MediaLibraryService(), Player.Listener, PlaybackStatsListen
 
           withContext(Dispatchers.Main) {
             // Normalization gain (0 when off or no metadata) plus the user's flat
-            // preset offset — Quiet/Loud/Aggressive apply even without metadata.
+            // preset offset â€” Quiet/Loud/Aggressive apply even without metadata.
             val normalizationGain = loudness?.let { (-it.toFloat() * 100).toInt() } ?: 0
             val targetGain = normalizationGain + presetOffsetMb
             val clampedGain = targetGain.coerceIn(MIN_GAIN_MB, MAX_GAIN_MB)
@@ -3686,7 +3686,7 @@ class MusicService : MediaLibraryService(), Player.Listener, PlaybackStatsListen
           // Each tick fully rebuilds and re-sends the widget's RemoteViews (album art
           // included) over binder IPC to the launcher. At 200ms that's 5 full widget
           // rebuilds/sec, well past what the platform's RemoteViews update pipeline
-          // renders smoothly — the progress bar visibly stutters instead of animating.
+          // renders smoothly â€” the progress bar visibly stutters instead of animating.
           // 1s keeps it live without saturating that pipeline.
           delay(1000)
         }
@@ -3705,7 +3705,7 @@ class MusicService : MediaLibraryService(), Player.Listener, PlaybackStatsListen
     val shareIntent =
       Intent(Intent.ACTION_SEND).apply {
         type = "text/plain"
-        putExtra(Intent.EXTRA_TEXT, "https://share.pulsemusic.app/watch?v=$songId")
+        putExtra(Intent.EXTRA_TEXT, "https://pulsemusicapp.vercel.app/watch?v=$songId")
         addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
       }
     startActivity(
@@ -3938,7 +3938,7 @@ class MusicService : MediaLibraryService(), Player.Listener, PlaybackStatsListen
     // Phrase-snapping can push triggerTime past latestTrigger by up to ~1 phrase.
     // The outgoing player keeps its own playlist and keeps advancing in real time
     // during the fade, so the full overlap must fit before its natural end or it
-    // auto-advances on its own mid-fade — playing the next track a second time (or
+    // auto-advances on its own mid-fade â€” playing the next track a second time (or
     // wrapping to track 1 on repeat-all). Rather than discarding the whole plan for
     // a few seconds of overshoot, shrink the overlap to whatever room is actually
     // left; only fall back if that leaves too little room to blend at all.
@@ -3957,7 +3957,7 @@ class MusicService : MediaLibraryService(), Player.Listener, PlaybackStatsListen
       return AutomixPlanResult(plan = null, pairAnalyzed = true)
     }
 
-    // Fold octave errors, then cap pitch-preserving stretch at ±8%.
+    // Fold octave errors, then cap pitch-preserving stretch at Â±8%.
     var tempoRatio = outBeat.bpm / inBeat.bpm
     while (tempoRatio > 1.5f) tempoRatio /= 2f
     while (tempoRatio < 0.667f) tempoRatio *= 2f
@@ -4263,12 +4263,12 @@ class MusicService : MediaLibraryService(), Player.Listener, PlaybackStatsListen
     val pb = prebuffered
     val secPlayer: ExoPlayer
     if (pb != null && pb.targetMediaId == targetMediaId) {
-      // Already buffered ahead of time — adopt it instead of cold-starting a new one.
+      // Already buffered ahead of time â€” adopt it instead of cold-starting a new one.
       secPlayer = pb.player
       activeAutomixPlan = pb.plan
       prebuffered = null
     } else {
-      releasePrebuffered() // stale — buffered for a track that's no longer next.
+      releasePrebuffered() // stale â€” buffered for a track that's no longer next.
 
       secPlayer = createExoPlayer()
       secPlayer.addListener(secondaryPlayerListener)
@@ -4323,7 +4323,7 @@ class MusicService : MediaLibraryService(), Player.Listener, PlaybackStatsListen
     // The outgoing player keeps its full playlist and keeps advancing in real time
     // while it fades out. If it reaches its own natural end before cleanupCrossfade
     // stops it (trigger-time math off, or the fade loop lagging behind due to a
-    // scheduling hiccup), it would auto-advance on its own — playing the next track
+    // scheduling hiccup), it would auto-advance on its own â€” playing the next track
     // a second time, or wrapping to track 1 on repeat-all. Truncate its playlist so
     // it has nowhere to advance to; worst case it just stops.
     try {
@@ -4464,7 +4464,7 @@ class MusicService : MediaLibraryService(), Player.Listener, PlaybackStatsListen
             // Fade-out then fade-in with a gentle dip: the outgoing track drops away
             // over the first ~60% of the blend, the incoming rises over the last ~60%,
             // so they overlap only through the middle where both sit well below full.
-            // Old track leaves, new one arrives — no sudden level match, no boost.
+            // Old track leaves, new one arrives â€” no sudden level match, no boost.
             // Both curves are cosine/sine eased, so the ramp stays click-free.
             val fadeOut = equalPowerOut(0f, 0.6f, progress)
             val fadeIn = equalPowerIn(0.4f, 1f, progress)

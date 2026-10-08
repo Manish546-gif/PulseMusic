@@ -1,4 +1,4 @@
-package com.pulse.music.manish.ui.menu
+﻿package com.pulse.music.manish.ui.menu
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -341,7 +341,7 @@ fun AlbumMenu(
                     type = "text/plain"
                     putExtra(
                       Intent.EXTRA_TEXT,
-                      "https://share.pulsemusic.app/playlist?list=${album.album.playlistId}"
+                      "https://pulsemusicapp.vercel.app/playlist?list=${album.album.playlistId}"
                     )
                   }
                 context.startActivity(Intent.createChooser(intent, null))

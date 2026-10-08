@@ -1,4 +1,4 @@
-package com.pulse.music.manish.pulse.component
+﻿package com.pulse.music.manish.pulse.component
 
 import android.content.Intent
 import androidx.compose.foundation.layout.*
@@ -163,7 +163,7 @@ fun UpdateAvailableDialog(
                       horizontalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
                       Text(
-                        text = "•",
+                        text = "â€¢",
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.primary,
                         fontWeight = FontWeight.Bold,
@@ -197,7 +197,7 @@ fun UpdateAvailableDialog(
             onClick = {
               onDismiss()
               val intent =
-                Intent(Intent.ACTION_VIEW, android.net.Uri.parse("https://pulsemusic.app"))
+                Intent(Intent.ACTION_VIEW, android.net.Uri.parse("https://pulsemusicapp.vercel.app"))
               context.startActivity(intent)
             },
             shape = actionShape,

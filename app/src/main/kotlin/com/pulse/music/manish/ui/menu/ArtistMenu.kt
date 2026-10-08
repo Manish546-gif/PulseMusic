@@ -1,4 +1,4 @@
-package com.pulse.music.manish.ui.menu
+﻿package com.pulse.music.manish.ui.menu
 
 import android.content.Intent
 import android.content.res.Configuration
@@ -208,7 +208,7 @@ fun ArtistMenu(
                         type = "text/plain"
                         putExtra(
                           Intent.EXTRA_TEXT,
-                          "https://share.pulsemusic.app/channel/${artist.id}"
+                          "https://pulsemusicapp.vercel.app/channel/${artist.id}"
                         )
                       }
                     context.startActivity(Intent.createChooser(intent, null))
