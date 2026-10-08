@@ -48,3 +48,9 @@ google-services-dev.json
 .env.*
 *.pem
 secrets.properties
+
+# Website (Vite)
+website/node_modules/
+website/dist/
+website/.vite/
+website/*.tsbuildinfo
