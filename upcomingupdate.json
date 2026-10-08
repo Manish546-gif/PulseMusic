@@ -1,0 +1,10 @@
+{
+  "features": [
+    {
+      "title": "Redesigned settings screen",
+      "description": "Every settings screen now uses grouped liquidGlass panels and monochrome row icons, replacing the flat list and stacked cards"
+    }
+  ],
+  "bug_fixes": [],
+  "contributors": []
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/shortcut_search"
+        android:shortcutId="search"
+        android:shortcutShortLabel="@string/search">
+        <intent
+            android:action="com.pulse.music.manish.action.SEARCH"
+            android:targetClass="com.pulse.music.manish.MainActivity"
+            android:targetPackage="com.pulse.music.manish" />
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/shortcut_library"
+        android:shortcutId="library"
+        android:shortcutShortLabel="@string/filter_library">
+        <intent
+            android:action="com.pulse.music.manish.action.LIBRARY"
+            android:targetClass="com.pulse.music.manish.MainActivity"
+            android:targetPackage="com.pulse.music.manish" />
+    </shortcut>
+</shortcuts>

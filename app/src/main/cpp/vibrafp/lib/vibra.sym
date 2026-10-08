@@ -1,0 +1,6 @@
+{
+  global:
+    Java_com_pulse_music_manish_recognition_VibraSignature_*;
+  local:
+    *;
+};

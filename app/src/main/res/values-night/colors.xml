@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Widget text colors for Pulse dark mode -->
+    <color name="widget_text_primary">#F5F5F5</color>
+    <color name="widget_text_secondary">#A0A0A0</color>
+</resources>

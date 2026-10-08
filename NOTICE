@@ -1,0 +1,50 @@
+Pulse Music
+Copyright (C) 2026 Pulse Music contributors
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+Upstream & Attribution
+----------------------
+Pulse Music is developed and maintained independently. It is a fork
+created from the Metrolist / ViMusic lineage and acknowledges the
+following projects for foundational architecture, features, and code
+that have been adapted and integrated under compatible open-source terms
+(see the "Special Thanks" section of the README for the full list):
+
+  * Metrolist                    - https://github.com/MetrolistGroup/Metrolist
+  * Vivi Music                   - https://github.com/vivizzz007/vivi-music
+  * InnerTubeX                   - https://github.com/MetrolistGroup/innertubex
+  * InnerTube (Kotlin)           - vendored client for YouTube Music's inner API
+
+All of the above are subject to their own licenses and copyrights, and
+every contributor retains copyright over their individual contributions.
+All contributions to this project are licensed to the project under the
+GNU GPL-3.0 (see CONTRIBUTING.md).
+
+Third-Party Notices
+-------------------
+This project is licensed under the GNU GPL-3.0 (see LICENSE). Where this
+repository includes, embeds, or depends on third-party open-source
+libraries or assets, their respective licenses and copyright notices
+apply alongside this notice.
+
+Unofficial API Disclaimer
+-------------------------
+Pulse Music is NOT affiliated with, endorsed by, or licensed from
+Google, YouTube, or YouTube Music, and holds no official API key or
+license from them. All music functionality relies on InnerTube, an
+unofficial, reverse-engineered interface used by YouTube Music's web
+client. Access through non-sanctioned clients may conflict with
+YouTube's Terms of Service. See the "Legal Disclaimer & Terms of Use"
+section of the README for the full statement. Use at your own risk.
